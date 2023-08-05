@@ -634,7 +634,7 @@ class Learner:
 
                 # only add good and short episodes
                 _reward = torch.cat(rew_list, dim=0).sum().item()
-                if info["success"] and len(obs_list) < 60 and _reward >= 0.5:
+                if info["success"]:
                     self.policy_storage.add_episode(
                         observations=ptu.get_numpy(torch.cat(obs_list, dim=0)),  # (L, dim)
                         actions=ptu.get_numpy(act_buffer),  # (L, dim)
