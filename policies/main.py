@@ -105,6 +105,8 @@ if FLAGS.seed is not None:
 if socket.gethostname() in ['theseus', 'titan']:
     if FLAGS.cuda is not None:
         v["cuda"] = FLAGS.cuda
+        if socket.gethostname() == 'titan':
+            v["cuda"] = v["cuda"] % 2
 else:
     v["cuda"] = 0
 
