@@ -883,7 +883,7 @@ class Learner:
                     # set: obs <- next_obs
                     obs = next_obs.clone()
 
-                    if "success" in info and info["success"] is True:  # keytodoor
+                    if "success" in info and info["success"]:  # keytodoor
                         success_rate[task_idx] = 1.0
 
                     if done_rollout:
