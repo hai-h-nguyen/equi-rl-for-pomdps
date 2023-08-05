@@ -179,7 +179,8 @@ learner = Learner(
     replay=FLAGS.replay,
     time_limit=FLAGS.time_limit,
     prefix=FLAGS.prefix,
-    ckpt_dir=FLAGS.checkpoint_dir
+    ckpt_dir=FLAGS.checkpoint_dir,
+    cfg_file=FLAGS.cfg,
 )
 
 logger.log(

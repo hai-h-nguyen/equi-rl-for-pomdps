@@ -40,7 +40,7 @@ import wandb
 class Learner:
     def __init__(self, env_args, train_args, eval_args,
                  policy_args, seed, replay, time_limit,
-                 prefix, ckpt_dir, **kwargs):
+                 prefix, ckpt_dir, cfg_file, **kwargs):
         self.seed = seed
         self.group_prefix = prefix
 
@@ -82,7 +82,8 @@ class Learner:
             logger.log("Checkpoint file not found")
             self.chkpt_dict = None
 
-        self.init_wandb(**env_args, **policy_args, **train_args)
+        if not replay:
+            self.init_wandb(cfg_file, **env_args, **policy_args, **train_args)
 
         self.init_env(**env_args)
 
@@ -337,6 +338,7 @@ class Learner:
 
     def init_wandb(
         self,
+        cfg_file,
         env_name,
         algo_name,
         actor_type,
@@ -367,6 +369,7 @@ class Learner:
                    group=group,
                    name=f"s{self.seed}",
                    **wandb_args)
+        wandb.save(cfg_file)
 
     def _start_training(self):
         self._n_env_steps_total = 0

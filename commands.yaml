@@ -1,14 +1,24 @@
 
 # non-equi
-python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --prefix dense
-python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 1 --cuda 1 --prefix dense
-# python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 2 --cuda 2 --prefix dense
-# python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 3 --cuda 3 --prefix dense
+# python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --prefix dense
+# python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 1 --cuda 1 --prefix dense
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 2 --cuda 2 --prefix dense
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 3 --cuda 3 --prefix dense
 
 
 
 # equi both
-python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --prefix dense
-python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --prefix dense
-# python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 2 --cuda 2 --prefix dense
-# python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 3 --cuda 3 --prefix dense
+# python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --prefix dense
+# python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --prefix dense
+python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 2 --cuda 2 --prefix dense
+python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 3 --cuda 3 --prefix dense
+
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac --seed 0 --cuda 0 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac --seed 1 --cuda 1 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac --seed 2 --cuda 2 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac --seed 3 --cuda 3 --prefix dense
+
+python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 2 --cuda 2 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 3 --cuda 3 --prefix dense
