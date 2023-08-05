@@ -1,0 +1,13 @@
+scikit-learn
+future-fstrings==1.2.0
+gym==0.21.0
+Box2D
+ruamel-yaml==0.16.12
+absl-py==0.11.0
+matplotlib
+seaborn
+mujoco-py==2.1.2.14
+more_itertools
+tensorboardX
+PyYAML
+wandb

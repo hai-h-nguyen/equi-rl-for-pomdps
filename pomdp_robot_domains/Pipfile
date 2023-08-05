@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+numpy = "*"
+scikit-image = "*"
+attrdict = "*"
+gitpython = "*"
+pyqt5 = "*"
+matplotlib = "*"
+pybullet = "*"
+sphinx = "*"
+rinohtype = "*"
+cupy-cuda115 = "*"
+scikit-learn = "*"
+sphinxcontrib-napoleon = "*"
+
+[requires]
+python_version = "3.7"

@@ -1,0 +1,1 @@
+This branch is aimed for reducing the size of the image replay buffer based on the efficient replay buffer of the original repo

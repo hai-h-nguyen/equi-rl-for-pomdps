@@ -1,0 +1,75 @@
+seed: 73
+cuda: 0 # use_gpu
+env:
+  env_type: pomdp
+  env_name: BlockPicking-Symm-v0
+
+  num_eval_tasks: 10 # num of eval episodes
+
+train:
+  # 100*50 = 50k steps
+  num_iters: 800 # number meta-training iterates
+  num_init_rollouts_pool: 20 # before training
+  num_expert_rollouts_pool: 20 # before training
+  num_rollouts_per_iter: 1
+
+  num_updates_per_iter: 1.0
+  # buffer params
+  buffer_size: 1e5
+  batch_size: 32 # to tune based on sampled_seq_len
+  sampled_seq_len: -1 # -1 is all, or positive integer
+  sample_weight_baseline: 0.0
+  buffer_type: seq_rot
+  num_aug_episode: 4
+
+eval:
+  log_interval: 10 # num of iters
+  save_interval: -1
+  log_tensorboard: false
+
+policy:
+  separate: True
+  actor_type: equi # [normal, equi]
+  critic_type: equi # [normal, equi]
+  algo_name: sac # [sac, td3]
+
+  num_rotations: 4 # group
+  flip_symmetry: true
+
+  action_embedding_size: 16 # no action input
+  observ_embedding_size: 0 # use image encoder
+  image_encoder: 
+    from_flattened: false
+  rnn_hidden_size: 128
+
+  dqn_layers: [128, 128]
+  policy_layers: [128, 128]
+  lr: 0.0003
+  gamma: 0.9
+  tau: 0.005
+
+  sac:
+    entropy_alpha: 0.01 # tend to be det policy...
+    automatic_entropy_tuning: true
+    alpha_lr: 0.001
+    init_alpha: 0.1
+
+  sacfd:
+    entropy_alpha: 0.01 # tend to be det policy...
+    automatic_entropy_tuning: true
+    alpha_lr: 0.001
+    init_alpha: 0.1
+
+  sac_drq:
+    entropy_alpha: 0.01 # tend to be det policy...
+    automatic_entropy_tuning: true
+    alpha_lr: 0.001
+    init_alpha: 0.1
+
+  td3:
+    ## since we normalize action space to [-1, 1]
+    ## the noise std is absolute value
+    exploration_noise: 0.1 
+    target_noise: 0.2
+    target_noise_clip: 0.5
+
