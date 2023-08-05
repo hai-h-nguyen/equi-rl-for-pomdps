@@ -423,7 +423,7 @@ class Learner:
 
         if self.num_init_rollouts_pool > 0 and self.chkpt_dict is None:
             logger.log("Collecting initial pool of data...")
-            self.collect_rollouts(
+            env_steps = self.collect_rollouts(
                 num_rollouts=self.num_init_rollouts_pool,
                 random_actions=True,
             )
@@ -437,7 +437,7 @@ class Learner:
             if isinstance(self.num_updates_per_iter, float):
                 # update: pomdp task updates more for the first iter_
                 train_stats = self.update(
-                    int(self._n_env_steps_total * self.num_updates_per_iter)
+                    int(env_steps * self.num_updates_per_iter)
                 )
                 self.log_train_stats(train_stats)
 

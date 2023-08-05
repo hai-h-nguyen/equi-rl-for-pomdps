@@ -139,10 +139,3 @@ register(
     entry_point='pdomains.drawer_opening_pix:DrawerEnv',
     max_episode_steps=50,
 )
-
-# for rebuttal
-register(
-    id='pdomains-block-pulling-dense-v0',
-    entry_point='pdomains.block_pulling:BlockEnv',
-    max_episode_steps=50,
-)

@@ -184,13 +184,14 @@ class BlockEnv(gym.Env):
         info = {}
 
         info["success"] = done and (reward > 0)
+        dense_reward = self.core_env.getEnvPenalty()
 
         self.step_cnt += 1
 
         if self.show:
             self.render()
 
-        return self.obs, reward, done, info
+        return self.obs, dense_reward, done, info
 
     def render(self, mode='human'):
         pass

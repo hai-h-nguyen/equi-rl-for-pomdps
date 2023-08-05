@@ -34,7 +34,7 @@ policy:
   algo_name: sac # [sac, td3]
 
   num_rotations: 4 # group
-  flip_symmetry: true # using dihedral group or not
+  flip_symmetry: false # using dihedral group or not
 
   action_embedding_size: 16 # no action input
   observ_embedding_size: 0 # use image encoder

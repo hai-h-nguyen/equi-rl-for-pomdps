@@ -33,7 +33,7 @@ policy:
   algo_name: sac # [sac, td3]
 
   num_rotations: 4 # group
-  flip_symmetry: true
+  flip_symmetry: false
 
   action_embedding_size: 16 # no action input
   observ_embedding_size: 0 # use image encoder
