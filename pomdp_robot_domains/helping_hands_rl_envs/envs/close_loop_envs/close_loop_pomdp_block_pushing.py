@@ -97,8 +97,8 @@ class CloseLoopPomdpBlockPushingEnv(CloseLoopEnv):
     return np.linalg.norm(np.array(self.goal_pos) - np.array(obj_pos)) < 0.05
 
   def getEnvPenalty(self):
-    delta_z = abs(self.objects[1].getZPosition() - 0.025) >= 0.005
-    return delta_z
+    obj_pos = self.objects[1].getPosition()[:2]
+    return -np.linalg.norm(np.array(self.goal_pos) - np.array(obj_pos)) + 0.05
 
   def isSimValid(self):
     for obj in self.objects:

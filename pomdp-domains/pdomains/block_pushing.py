@@ -197,7 +197,7 @@ class BlockEnv(gym.Env):
 
         self.obs = self._process_obs(state, obs)
 
-        # reward += -0.1*self.core_env.getEnvPenalty()
+        dense_reward = self.core_env.getEnvPenalty()
 
         info = {}
 
@@ -208,7 +208,7 @@ class BlockEnv(gym.Env):
         if self.show:
             self.render()
 
-        return self.obs, reward, done, info
+        return self.obs, dense_reward, done, info
 
     def render(self, mode='human'):
         pass
