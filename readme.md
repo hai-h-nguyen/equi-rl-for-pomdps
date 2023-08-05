@@ -26,9 +26,7 @@ conda activate vit
 ```
 3. Clone this repository and install required packages
 ```
-git clone --recursive https://github.com/hai-h-nguyen/cosil-corl22.git
-git checkout integrate_d4
-git submodule update --recursive --remote
+git clone https://github.com/hai-h-nguyen/equi-rl-for-pomdps.git
 pip install -r requirements.txt
 ```
 4. Install [Pytorch](https://pytorch.org/get-started/previous-versions/) (I used 1.12.0 for cuda 10.2 but other versions should work)

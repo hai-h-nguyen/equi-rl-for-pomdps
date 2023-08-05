@@ -57,9 +57,6 @@ class BlockEnv(gym.Env):
         self.image_space = gym.spaces.Box(
             shape=self.img_size, low=0, high=1.0, dtype=np.float32
         )
-        # self.observation_space = gym.spaces.Box(
-        #     shape=(np.array(self.img_size).prod(),), low=0, high=1.0, dtype=np.float32
-        # )
 
         self.target_obj_idx = 0
 
@@ -115,19 +112,6 @@ class BlockEnv(gym.Env):
             action[0] = 2*action[0] - 1
 
         return action
-
-    # def query_expert(self):
-    #     """pick the movable block"""
-    #     action = self.core_env.getNextAction(0)
-    #     action[1:4] /= self.xyz_range
-
-    #     if self.action_dim == 5:
-    #         action[4] /= self.r_range
-
-    #     if self.env_config['robot'] == 'kuka':
-    #         action[0] = 2*action[0] - 1
-
-    #     return action
 
     def move_up(self):
         """pick the immovable block"""

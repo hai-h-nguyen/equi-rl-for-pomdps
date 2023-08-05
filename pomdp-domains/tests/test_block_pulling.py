@@ -12,6 +12,7 @@ for i in range(1000):
     # action = env.action_space.sample()
     action = env.query_expert(ep_idx)
     obs, reward, done, info = env.step(action)
+    print(reward)
     cnt += 1
     if done:
         print(cnt)

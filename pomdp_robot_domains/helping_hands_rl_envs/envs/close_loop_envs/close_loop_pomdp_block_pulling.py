@@ -47,6 +47,11 @@ class CloseLoopPomdpBlockPullingEnv(CloseLoopEnv):
   def _checkTermination(self):
     return self.objects[0].isTouching(self.objects[1])
 
+  def getEnvPenalty(self):
+    xy_diff = np.array(self.objects[0].getXYPosition()) - np.array(self.objects[1].getXYPosition())
+    xy_distance = np.linalg.norm(xy_diff)
+    return -xy_distance + 0.1
+
 def createCloseLoopPomdpBlockPullingEnv(config):
   return CloseLoopPomdpBlockPullingEnv(config)
 

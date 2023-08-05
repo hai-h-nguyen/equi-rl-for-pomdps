@@ -11,34 +11,6 @@
 # python3 policies/main.py --cfg configs/pomdp/block_picking/rnn-equi-all.yml --algo sac --seed 0 --cuda 0
 # python3 policies/main.py --cfg configs/pomdp/block_picking/rnn-equi-all.yml --algo sac --seed 1 --cuda 1
 
-# # equi actor/critic only
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-actor.yml --env CarFlag-Symm-v0 --algo sacd --seed 0 --cuda 0
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-actor.yml --env CarFlag-Symm-v0 --algo sacd --seed 1 --cuda 1
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-actor.yml --env CarFlag-Symm-v0 --algo sacd --seed 2 --cuda 2
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-actor.yml --env CarFlag-Symm-v0 --algo sacd --seed 3 --cuda 3
-
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-critic.yml --env CarFlag-Symm-v0 --algo sacd --seed 0 --cuda 0
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-critic.yml --env CarFlag-Symm-v0 --algo sacd --seed 1 --cuda 1
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-critic.yml --env CarFlag-Symm-v0 --algo sacd --seed 2 --cuda 2
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/rnn-equi-critic.yml --env CarFlag-Symm-v0 --algo sacd --seed 3 --cuda 3
-
-# # equi both
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-all.yml --env CartPole-V-v0 --algo sacd --seed 0 --cuda 0
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-all.yml --env CartPole-V-v0 --algo sacd --seed 1 --cuda 1
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-all.yml --env CartPole-V-v0 --algo sacd --seed 2 --cuda 2
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-all.yml --env CartPole-V-v0 --algo sacd --seed 3 --cuda 3
-
-# # equi actor/critic only
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-actor.yml --env CartPole-V-v0 --algo sacd --seed 0 --cuda 0
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-actor.yml --env CartPole-V-v0 --algo sacd --seed 1 --cuda 1
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-actor.yml --env CartPole-V-v0 --algo sacd --seed 2 --cuda 2
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-actor.yml --env CartPole-V-v0 --algo sacd --seed 3 --cuda 3
-
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-critic.yml --env CartPole-V-v0 --algo sacd --seed 0 --cuda 0
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-critic.yml --env CartPole-V-v0 --algo sacd --seed 1 --cuda 1
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-critic.yml --env CartPole-V-v0 --algo sacd --seed 2 --cuda 2
-# python3 policies/main.py --cfg configs/pomdp/carflag_symm/v/rnn-equi-critic.yml --env CartPole-V-v0 --algo sacd --seed 3 --cuda 3
-
 # python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix eff_buffer_d4
 # python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix eff_buffer_d4
 # python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 2 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix eff_buffer_d4
@@ -54,8 +26,8 @@
 # python3 policies/main.py --cfg configs/drawer_opening/rnn-equi-all.yml --algo sac --seed 2 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix eff_buffer_d4
 # python3 policies/main.py --cfg configs/drawer_opening/rnn-equi-all.yml --algo sac --seed 3 --cuda 1 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix eff_buffer_d4
 
-python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix no_per_eff_buffer_d4
-python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix no_per_eff_buffer_d4
+# python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix no_per_eff_buffer_d4
+# python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 1 --cuda 1 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_rot_eff --prefix no_per_eff_buffer_d4
 # python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 2 --cuda 0 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_per_rot_eff --prefix eff_buffer_d4
 # python3 policies/main.py --cfg configs/block_pushing/rnn-equi-all.yml --algo sac --seed 3 --cuda 1 --time_limit 1000 --num_expert_episodes 80 --buffer_type seq_per_rot_eff --prefix eff_buffer_d4
 

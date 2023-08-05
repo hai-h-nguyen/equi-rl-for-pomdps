@@ -41,12 +41,6 @@ register(
 )
 
 register(
-    id='pdomains-car-flag-symm-continuous-v0',
-    entry_point='pdomains.symmetric_car_flag_continuous_1d:CarEnv',
-    max_episode_steps=160,
-)
-
-register(
     id='pdomains-car-flag-symm-2d-v0',
     entry_point='pdomains.symmetric_car_flag_discrete_2d:CarEnv',
     max_episode_steps=50,
@@ -135,12 +129,6 @@ register(
 )
 
 register(
-    id='pdomains-block-stacking-v0',
-    entry_point='pdomains.block_stacking:BlockEnv',
-    max_episode_steps=50,
-)
-
-register(
     id='pdomains-drawer-opening-v0',
     entry_point='pdomains.drawer_opening:DrawerEnv',
     max_episode_steps=50,
@@ -152,8 +140,9 @@ register(
     max_episode_steps=50,
 )
 
+# for rebuttal
 register(
-    id='pdomains-drawer-opening-hard-v0',
-    entry_point='pdomains.drawer_opening_hard:DrawerEnv',
-    max_episode_steps=60,
+    id='pdomains-block-pulling-dense-v0',
+    entry_point='pdomains.block_pulling:BlockEnv',
+    max_episode_steps=50,
 )
