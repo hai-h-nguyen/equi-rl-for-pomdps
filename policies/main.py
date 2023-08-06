@@ -22,7 +22,7 @@ flags.DEFINE_string("algo", None, '["sac", "sacfd", "sacd_drq"]')
 flags.DEFINE_boolean("automatic_entropy_tuning", None, "for [sac]")
 flags.DEFINE_float("target_entropy", None, "for [sac]")
 flags.DEFINE_float("entropy_alpha", None, "for [sac]")
-flags.DEFINE_float("time_limit", 7.0, "time limit (discovery)")
+flags.DEFINE_float("time_limit", 1000.0, "time limit (discovery)")
 flags.DEFINE_float("init_alpha", None, "init value for alpha")
 
 flags.DEFINE_integer("seed", None, "seed")
