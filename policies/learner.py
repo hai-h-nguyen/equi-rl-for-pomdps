@@ -25,6 +25,7 @@ from buffers.simple import SimpleBuffer
 from buffers.seq_vanilla import SeqBuffer
 from buffers.seq_rot import SeqRotBuffer
 from buffers.seq_per_rot import SeqPerRotBuffer
+from buffers.seq_rad_rot import SeqRadRotBuffer
 
 from buffers_efficient.seq_vanilla import SeqBuffer as SeqBufferEff
 from buffers_efficient.seq_rot import SeqRotBuffer as SeqRotBufferEff
@@ -271,6 +272,10 @@ class Learner:
             # prioritized replay + rotational augmentation (for BlockPushing)
             elif buffer_type == SeqPerRotBuffer.buffer_type:
                 buffer_class = SeqPerRotBuffer
+
+            # RAD
+            elif buffer_type == SeqRadRotBuffer.buffer_type:
+                buffer_class = SeqRadRotBuffer
 
             # no rotational augmentation efficient
             elif buffer_type == SeqBufferEff.buffer_type:

@@ -1,0 +1,2 @@
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --checkpoint_dir /scratch/nguyen.hai1/ --cuda 0 --env BlockPulling-Symm-RAD-v0 --buffer_type seq_rad_rot --time_limit 7.5 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac --seed 0 --checkpoint_dir /scratch/nguyen.hai1/ --cuda 0 --env BlockPushing-Symm-RAD-v0 --buffer_type seq_rad_rot --time_limit 7.5 --prefix dense

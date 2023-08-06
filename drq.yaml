@@ -1,0 +1,2 @@
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac_drq --seed 0 --checkpoint_dir /scratch/nguyen.hai1/ --cuda 0 --prefix dense
+python3 policies/main.py --cfg configs/block_pushing/rnn.yml --algo sac_drq --seed 0 --checkpoint_dir /scratch/nguyen.hai1/ --cuda 0 --prefix dense

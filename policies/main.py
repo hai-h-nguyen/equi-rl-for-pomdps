@@ -35,7 +35,7 @@ flags.DEFINE_integer("num_iters", None, "num episodes trained")
 flags.DEFINE_integer("cuda", None, "cuda device id")
 flags.DEFINE_string("policy_dir", None, "directory to the policy folder")
 flags.DEFINE_string("buffer_type", None,
-                    "buffer [seq_vanilla, aug_seq_vanilla, aug_rad_crop]")
+                    "buffer [seq_rot, seq_per_rot, seq_rad_rot]")
 flags.DEFINE_string("checkpoint_dir", None, "directory for checkpoint")
 flags.DEFINE_string("actor_type", None, "type of actor [normal, equi]")
 flags.DEFINE_string("critic_type", None, "type of critic [normal, equi]")
