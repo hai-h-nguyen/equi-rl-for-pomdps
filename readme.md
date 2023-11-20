@@ -1,7 +1,10 @@
+```
 # Equivariant Reinforcement Learning under Partial Observability
 ```
 ---
 ## Contents
+
+[Website](https://sites.google.com/view/equi-rl-pomdp) and [Paper](https://openreview.net/forum?id=AnDDMQgM7-)
 
 [Setup](#setup)
 
