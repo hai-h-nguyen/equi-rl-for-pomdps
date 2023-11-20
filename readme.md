@@ -1,6 +1,5 @@
 # Equivariant Reinforcement Learning under Partial Observability
 ```
-```
 ---
 ## Contents
 
