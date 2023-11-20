@@ -5,6 +5,8 @@ __pycache__/
 *.pyc
 .cache/
 
+theseus.yaml
+titan.yaml
 
 # logs, a soft link to disk
 logs

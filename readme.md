@@ -1,8 +1,4 @@
 # Equivariant Reinforcement Learning under Partial Observability
-
-This is the repo stored the code for our paper.
-
-```
 ```
 ---
 ## Contents
@@ -21,8 +17,8 @@ This is the repo stored the code for our paper.
 1. Install [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 2. Create and activate environment
 ```
-conda create --env vit python=3.8.16
-conda activate vit
+conda create --env equi_pomdps python=3.8.16
+conda activate equi_pomdps
 ```
 3. Clone this repository and install required packages
 ```

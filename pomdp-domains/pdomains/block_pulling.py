@@ -191,7 +191,7 @@ class BlockEnv(gym.Env):
         if self.show:
             self.render()
 
-        return self.obs, dense_reward, done, info
+        return self.obs, reward, done, info
 
     def render(self, mode='human'):
         pass
