@@ -58,7 +58,7 @@ cd ..
 ```
 python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --num_expert_episodes 80
 python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --num_expert_episodes 80
-python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --env BlockPushing-Symm-RAD-v0 --buffer_type seq_rad_rot
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --env BlockPulling-Symm-RAD-v0 --num_expert_episodes 80 --buffer_type seq_rad_rot
 python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac_drq --seed 3 --cuda 0 --num_rotations 4 --num_expert_episodes 80
 ```
 
