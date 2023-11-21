@@ -367,10 +367,8 @@ class Learner:
         else:
             wandb_args = {"resume": None}
 
-        wandb.login(key='716c327163fa74839eebff06e5d42277ef7c1896')
         wandb.init(project=project_name,
                    settings=wandb.Settings(_disable_stats=True),
-                   entity='hainh22',
                    group=group,
                    name=f"s{self.seed}",
                    **wandb_args)
