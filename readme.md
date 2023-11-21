@@ -1,7 +1,7 @@
 # Equivariant Reinforcement Learning under Partial Observability
 ## Contents
 
-[Website](https://sites.google.com/view/equi-rl-pomdp) and [Paper](https://openreview.net/forum?id=AnDDMQgM7-)
+[Website](https://sites.google.com/view/equi-rl-pomdp) and [Camerea-Ready Paper](https://drive.google.com/file/d/14aE_oHkdYZxx3fuALCs0ZAKji8HF3WQ4/view?usp=sharing)
 
 [Setup](#setup)
 
@@ -56,8 +56,8 @@ cd ..
 ### Training
 
 ```
-python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --time_limit 1000 --num_expert_episodes 80
-python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --time_limit 1000 --num_expert_episodes 80
+python3 policies/main.py --cfg configs/block_pulling/rnn.yml --algo sac --seed 0 --cuda 0 --num_expert_episodes 80
+python3 policies/main.py --cfg configs/block_pulling/rnn-equi-all.yml --algo sac --seed 0 --cuda 0 --num_expert_episodes 80
 
 ```
 
